@@ -22,7 +22,7 @@ def msg_receive_(msg, cmd, ln):
 		params['method'] = 'sendPhoto'
 		url = requests.get('http://api.o{}.ru/noise/1'.format(cmd))
 		params['photo'] = 'http://media.o{}.ru/{}'.format(cmd, url.json()[0]["preview"])
-		params['caption'] = "By: @TetasRobot"
+		params['caption'] = "By: @Rafazinhabot"
 	return flask.Response(response=json.dumps(params), headers={'Content-Type':'application/json'},status=200)
 
 import handler
